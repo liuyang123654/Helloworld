@@ -1,0 +1,13 @@
+# git bash上传代码到github #
+- 新建一个空的文件夹
+- 右击文件夹，git bash here
+- 输入git init，初始化，在本地创建一个git仓库
+- 将要上传的文件复制到这个文件夹下
+- 输入git add .将项目提交到暂存区，(添加所有文件，如果是添加某一个就写git add xxxx.xx)
+- git commit -m "first" 将项目提交到git仓库
+- 打开github新建一个仓库
+- 复制库的http链接(即网址，一般是https://github.com/自己的github名/库名.git)
+- git branch -M main 上传到main分支
+- git remote add origin https://....git(即刚刚复制的网址) 将本地仓库和远程仓库连接
+- git pull -u origin main将本地项目推送到远程仓库(也就是将本地的当前分支自动与origin主机的main分支进行合并)(一般在前面加一个git push origin main 将本地的main推送到origin主机的main分支，git push的命令用于本地分支的更新，推送到远程分支)
+- **总结：git pull就是把origin主机的分支拉回到本地分支，git push是把本地分支推送到远程分支** 
